@@ -1,0 +1,16 @@
+#slaporra .navbar-brand{
+     color: white;
+}
+
+#navbarNav .nav-link{
+    color: white;
+}
+
+#navbarNav  .navbar-toggler{
+    color: white;
+}
+#player{
+    margin-top: 10%;
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
