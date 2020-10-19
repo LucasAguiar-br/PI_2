@@ -9,10 +9,9 @@
 
         <header>
 			<div class="caixa">
-                    <img src="imagens/logo.png" alt="Logo da Eagle Games">
-
 				<nav>
 					<ul>
+                        <li><img src="imagens/logo.png" alt="Logo da Eagle Games" class="logo"> </li>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="jogos.html">Jogos</a></li>
                         <li><a href="sobre.html">Sobre</a></li>
@@ -23,20 +22,22 @@
 			</div>
 		</header>
         <main>
-            <form>
+            <form action="validacao.php" method="post">
                 <fieldset>
                     <div class="formulario">
                         <img src=imagens/icon3.png class="icon">
-                        <input type="email" id="email" required placeholder="seuemail@dominio.com">
+                        <input type="email" name="email" id="email" required placeholder="seuemail@dominio.com">
                     </div>
                     <div class="formulario">
                         <img src=imagens/icon2.png class="icon">
-                        <input type="password" id="senha" required placeholder="digite sua senha">
+                        <input type="password" name="senha" id="senha" required placeholder="digite sua senha">
                     </div>
                     <div class="formulario">
                         <input type="submit" value="Entrar" class="enviar">
                     </div>
-                    
+                    <div class="link">
+                        <a class="redefinir" href="redefinir.html"> Esqueceu a senha?</a>
+                    </div>
 
                 </fieldset>
                 
