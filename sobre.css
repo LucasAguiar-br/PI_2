@@ -1,0 +1,70 @@
+html{
+	background-color:black ;
+	font-family: "Open Sans, Arial";
+}
+header{
+	background-color: black;
+	height: auto;
+	width: 100%;
+	height: auto;
+
+}
+
+nav li {
+	position: relative;
+	display: inline-flex;
+	margin: 0 0 0 40px;
+	
+	
+}
+nav a {
+	color: rgba(192, 188, 188, 0.774);
+	text-decoration: none;	
+}
+nav a:hover {
+	color: white;
+	text-decoration: none;
+	transition: 1s all;
+}
+img{
+	position: relative;
+	max-width: 1.6rem;
+}
+.logo {
+	margin-right: 3rem;
+}
+  
+#Retngulo_40 {
+    fill:white
+  }
+
+   .Retngulo_40 {
+    position: absolute;
+    overflow: visible;
+    width: 1317px;
+    height: 347px;
+    left: 300px;
+    top: 300px;
+  }
+
+  #Retngulo_40 p {
+    color: #1C1C1C;
+    font-family: Georgia,serif;
+    width: 100%;
+    position: relative;
+    margin-left: 30px;
+  }
+
+  #sobre-nos {
+    left: 30%;
+    top: 320px;
+    position: absolute;
+    overflow: visible;
+    width: 828px;
+    text-align: center;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    color: rgba(0,0,0,1);
+  }
