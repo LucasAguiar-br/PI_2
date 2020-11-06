@@ -1,0 +1,78 @@
+
+fieldset {
+    margin: 3rem;
+    border-color: rgb(48, 46, 46);
+    width: 55rem;
+    background-color: rgb(48, 46, 46);
+    border-radius: 10px;
+    margin-top: 5rem;
+}
+.formulario {
+    margin-top: 0.5rem;
+    border-top: 5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+label {
+    left: 19px;
+}
+.enviar {
+    width: 10rem;
+    margin: 1rem;
+    padding: 12px 0;
+    background: gray;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    transition: 1s all;
+    cursor: pointer;
+    position: relative;
+}
+.enviar:hover {
+    background: rgb(83, 83, 83);
+    transform: scale(1.04);
+}
+main {
+    border-style: solid;
+    border-width: 2px;
+    border-color: gray;	
+    border-radius: 10px;
+    padding-bottom: 30%;
+}
+.checkbox {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+.icon {
+    margin-right: 0.2rem;
+    margin-top: 1rem;
+}
+#nome,
+#email,
+#senha,
+#avatar {
+    padding-top: 0.8rem;
+    padding-left: 2rem;
+    margin-top: 1rem;
+    width: 20rem;
+}
+  
+.link {
+    font-size: 1.5rem;
+    text-align: center;
+}
+.redefinir:link {
+    text-decoration: underline;
+    color: white;
+}
+.redefinir:visited {
+    text-decoration: none;
+    color: white;
+}
+.redefinir:hover {
+    text-decoration: underline;
+    color: gray;
+    transition: 2s;
+}
