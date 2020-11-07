@@ -7,12 +7,14 @@ header {
   height: auto;
   width: 100%;
   height: auto;
+  margin-bottom: 3rem;
 }
 
 nav li {
   position: relative;
   display: inline-flex;
   margin: 0 0 0 40px;
+  font-size: 2rem;
 }
 nav a {
   color: rgba(192, 188, 188, 0.774);
@@ -355,7 +357,103 @@ nav a:hover {
   top: 1057px;
 }
 
+#grupo_destaque {
+  position: absolute;
+  width: 265px;
+  height: 54px;
+  left: 828px;
+  top: 2800px;
+  overflow: visible;
+}
 
+#retangulo_destaque {
+  fill: rgba(255, 255, 255, 1);
+  stroke: rgba(1, 1, 1, 1);
+  stroke-width: 1px;
+  stroke-linejoin: miter;
+  stroke-linecap: butt;
+  stroke-miterlimit: 4;
+  shape-rendering: auto;
+}
+
+.retangulo_destaque {
+  position: absolute;
+  overflow: visible;
+  width: 265px;
+  height: 54px;
+  left: 0px;
+  top: 0px;
+}
+
+#destaque {
+  left: 54px;
+  top: 3px;
+  position: absolute;
+  overflow: visible;
+  width: 157px;
+  white-space: nowrap;
+  text-align: left;
+  font-family: Impact;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  color: rgba(255, 215, 0, 1);
+}
+
+#grupo_final {
+  position: absolute;
+  width: 937px;
+  height: 546px;
+  left: 110px;
+  top: 3000px;
+  overflow: visible;
+}
+
+#Fall_Guys {
+  position: absolute;
+  width: 800px;
+  height: 510px;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+
+#Fall-Guys-2 {
+  position: absolute;
+  width: 496px;
+  height: 240px;
+  left: 1246px;
+  top: 3000px;
+  overflow: visible;
+}
+
+#Fall-Guys-3 {
+  position: absolute;
+  width: 496px;
+  height: 257px;
+  left: 1246px;
+  top: 3250px;
+  overflow: visible;
+}
+#grupo-footer {
+  position: absolute;
+  width: 1000px;
+  height: 50px;
+  left: 0px;
+  top: 150px;
+  overflow: visible;
+}
+#retangulo_footer {
+  fill: #bbbfca;
+}
+.retangulo_footer {
+  position: absolute;
+  overflow: visible;
+  width: 1000px;
+  height: 30px;
+  left: 0px;
+  top: 3500px;
+}
 
 fieldset {
   margin: 3rem;
