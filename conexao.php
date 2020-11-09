@@ -1,7 +1,7 @@
 <?php
-    $serverName = 'localhost';
+    $serverName = 'DESKTOP-LJC50H1\SQLEXPRESS';
     $connectionInfo = array("Database"=>"PI_EAGLE", "UID"=>"sa", "PWd"=>"123");
-    $con = sqlsrv_connect($serverName, $connectionInfo);
+    $conn = sqlsrv_connect($serverName, $connectionInfo);
 
     if($serverName){
         echo "Conectado";
