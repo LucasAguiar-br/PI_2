@@ -75,3 +75,12 @@ main {
     color: gray;
     transition: 2s;
 }
+.imagem{
+    width: 50px;
+
+}
+h2{
+    color: white;
+    font-size: 4rem;
+    margin-left: 17rem;
+}
