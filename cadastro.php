@@ -65,9 +65,9 @@ include("conexao2.php");
     </form>
     <?php
     if (isset($_POST['Criar'])) {
-      $usuario = $_POST['nome'];
-      $email = $_POST['email'];
-      $senha = $_POST['senha'];
+      $usuario = addslashes($_POST['nome']);
+      $email = addslashes($_POST['email']);
+      $senha = md5(addslashes($_POST['senha']));
 
       $inserir = "INSERT INTO CADASTRO(NOME, EMAIL, SENHA) VALUES('$usuario', '$email', '$senha')";
 
