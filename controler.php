@@ -10,12 +10,15 @@
 
 
     if($filaControler>0){
-        echo "<script>alert('Bem Vindo!');</script>";
-        header("location:index.html");
+        echo "<script>alert('Bem vindo!')</script>";
+
+        header("refresh:0;url=http://localhost/PI_2/index.html");
+
+
     }
     else{
-        echo "<h1>Dados inválidos</h1>";
+        echo "<script>alert('Dados Inválidos')</script>";
 
-        header("refresh:2;url=http://localhost/PI_2/login.html");
+        header("refresh:0;url=http://localhost/PI_2/login.html");
     }
  ?>
