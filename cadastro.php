@@ -47,7 +47,7 @@ include("conexao2.php");
         </div>
         <div class="formulario">
           <img src=imagens/icon2.png class="icon">
-          <input type="password" name="senha" id="senha" required placeholder="Confirme sua senha">
+          <input type="password" name="senha2" id="senha" required placeholder="Confirme sua senha">
         </div>
         <div class="formulario">
           <img src=imagens/icon4.png class="icon">
@@ -67,12 +67,15 @@ include("conexao2.php");
     if (isset($_POST['Criar'])) {
       $usuario = addslashes($_POST['nome']);
       $email = addslashes($_POST['email']);
-      $senha = md5(addslashes($_POST['senha']));
+      $senha = addslashes($_POST['senha']);
+      $senha2 = addslashes($_POST['senha2']);
 
+      if($senha === $senha2){
       $inserir = "INSERT INTO CADASTRO(NOME, EMAIL, SENHA) VALUES('$usuario', '$email', '$senha')";
-
+       
       $executar = sqlsrv_query($conn, $inserir);
-
+      }
+      
       if ($executar) {
         echo "<script>alert('Usuario criado!')</script>";
 
