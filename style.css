@@ -1,54 +1,54 @@
 html {
-  background-color: black;
-  font-family: "Open Sans, Arial";
-}
-header {
-  background-color: black;
-  height: auto;
-  width: 100%;
-  margin-bottom: 3rem;
-}
-nav li {
-  position: relative;
-  display: inline-flex;
-  margin: 0 0 0 40px;
-  font-size: 2rem;
-}
-nav a {
-  color: rgba(192, 188, 188, 0.774);
-  text-decoration: none;
-}
-nav a:hover {
-  color: white;
-  text-decoration: none;
-  transition: 1s all;
-}
-.logo {
-  margin-right: 3rem;
-}
-#grupo-footer {
-  position: absolute;
-  width: 1000px;
-  height: 50px;
-  left: 0px;
-  top: 150px;
-  overflow: visible;
-}
-#retangulo_footer {
-  fill: #bbbfca;
-}
-.retangulo_footer {
-  position: absolute;
-  overflow: visible;
-  width: 1000px;
-  height: 30px;
-  left: 0px;
-  top: 3500px;
-}
-.caixa img {
-  position: relative;
-  max-width: 1.69rem;
-}
-p {
-  color: white;
-}
+    background-color: black;
+    font-family: "Open Sans, Arial";
+  }
+  header {
+    background-color: black;
+    height: auto;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  nav li {
+    position: relative;
+    display: inline-flex;
+    margin: 0 0 0 40px;
+    font-size: 2rem;
+  }
+  nav a {
+    color: rgba(192, 188, 188, 0.774);
+    text-decoration: none;
+  }
+  nav a:hover {
+    color: white;
+    text-decoration: none;
+    transition: 1s all;
+  }
+  .logo {
+    margin-right: 3rem;
+  }
+  #grupo-footer {
+    position: absolute;
+    width: 1000px;
+    height: 50px;
+    left: 0px;
+    top: 150px;
+    overflow: visible;
+  }
+  #retangulo_footer {
+    fill: #bbbfca;
+  }
+  .retangulo_footer {
+    position: absolute;
+    overflow: visible;
+    width: 1000px;
+    height: 30px;
+    left: 0px;
+    top: 3500px;
+  }
+  .caixa img {
+    position: relative;
+    max-width: 1.69rem;
+  }
+  p {
+    color: white;
+  }

@@ -1,386 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="pt-br">
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"/>
-    <link rel="stylesheet" href="review.css"/>
-    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <!-- JS-->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body>
-    <div id="Review">
-      <div id="LogoTipo">
-        <span>LogoTipo</span>
-      </div>
-      <div id="Login">
-        <span>Login</span>
-      </div>
-      <div id="Inscreva-se">
-        <span>Inscreva-se</span>
-      </div>
-      <img
-        id="Ghost-of-Tsushima-1"
-        src="imagens/Ghost-of-Tsushima-1.png"
-        srcset="imagens/Ghost-of-Tsushima-1.png 1x, Ghost-of-Tsushima-1@2x.png 2x"
-      />
-      <div id="Grupo_22">
-        <svg class="Retngulo_29">
-          <rect
-            id="Retngulo_29"
-            rx="20"
-            ry="20"
-            x="0"
-            y="0"
-            width="92"
-            height="88"
-          ></rect>
-        </svg>
-        <div id="ID18">
-          <span>18</span>
+  <!-- Css-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="review.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- JS-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header class="container-fluid">
+    <title>Pagina inicial</title>
+    <div>
+      <nav class=" navbar navbar-expand-lg navbar-light bg-dark">
+        <img src="imagens/logo.png" class="navbar-brand" id="logo">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" id="menu">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="sobre.html">Sobre nós <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="review.html">review</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cadastro.php">cadastre-se</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">login</a>
+            </li>
+          </ul>
         </div>
-      </div>
-      <div id="Grupo_56">
-       
-      </div>
-      <div class="container">
-        <div class="embed-responsive embed-responsive-16by9" id="player">
-          <iframe
-            width="400"
-            height="315"
-            src="https://www.youtube.com/embed/Zbq7BnsQhrw"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          >
-          </iframe>
-        </div>
-      </div>
-      </div>
-      <div id="JIN_IMG">
-        <span
-          >JIN DEVE ABANDONAR AS TRADIÇÕES E SE TORNAR<br />
-          O FANTASMA</span
-        >
-      </div>
-      <img
-        id="ID20200710-ghost-of-tsushima-1"
-        src="imagens/ID20200710-ghost-of-tsushima-1.png"
-        srcset="imagens/
-          ID20200710-ghost-of-tsushima-1.png    1x,
-          ID20200710-ghost-of-tsushima-1@2x.png 2x
-        "
-      />
-      <div id="TSUSHIMA_UM__CONTRASTE__ENTRE_">
-        <span
-          >TSUSHIMA, UM <br />CONTRASTE ENTRE <br />DEVASTAÇÃO DA GUERRA <br />E
-          BELEZAS ANCESTRAIS</span
-        >
-      </div>
-      <div id="Aventure-se_alm_dos_campos_de_">
-        <span
-          >Aventure-se além dos campos de batalha e <br />vivencie o Japão
-          feudal de uma forma nunca antes vista. <br />Neste jogo de ação e
-          aventura em mundo aberto, <br />trilhe por paisagens vastas e terrenos
-          amplos,<br />
-          encontrando personagens riquíssimos, descobrindo<br />
-          monumentos antigos e revelando toda a beleza oculta de<br />
-          Tsushima. Explore regiões meticulosamente criadas <br />que mostram
-          toda a diversidade dessa enorme ilha.<br />
-          De campos ondulantes e santuários tranquilos<br />
-          a florestas ancestrais, vilas e montanhas com paisagens<br />
-          de brilhar os olhos. Encontre paz na quietude<br />
-          serena da natureza e alívio nos momentos partilhados<br />
-          com as pessoas que ajuda ao longo de sua jornada.</span
-        >
-      </div>
-      <img
-        id="BB10Ny0r"
-        src="imagens/BB10Ny0r.png"
-        srcset="imagens/BB10Ny0r.png 1x, BB10Ny0r@2x.png 2x"
-      />
-      <div id="A_ASCENSO_DO__FANTASMA">
-        <span>A ASCENSÃO DO <br />FANTASMA</span>
-      </div>
-      <div id="Jin_foi_criado_e_treinado_segu">
-        <span
-          >Jin foi criado e treinado segundo os caminhos dos samurais.
-          <br />Quando os mongóis aniquilam os exércitos desses guerreiros,
-          <br />seu mundo entra em colapso. Ele se depara com a decisão
-          <br />mais difícil de sua vida: honrar as tradições e os costumes de
-          sua criação<br />
-          como samurai, travando uma luta que não pode vencer, <br />ou desviar
-          desse caminho para proteger a ilha e seu povo a qualquer custo.
-          <br />Em sua jornada para recuperar Tsushima, Jin deve buscar os
-          conselhos<br />
-          e o apoio de velhos amigos, além de novos e improváveis aliados.
-          <br />Ele precisa se desapegar das tradições para se tornar um novo
-          tipo de guerreiro<br />
-          e proteger o que restou de seu lar, custe o que custar.</span
-        >
-      </div>
-      <img
-        id="ID01_Overlook-02-720x405"
-        src="imagens/ID01_Overlook-02-720x405.png"
-        srcset="imagen/
-          ID01_Overlook-02-720x405.png    1x,
-          ID01_Overlook-02-720x405@2x.png 2x
-        "
-      />
-      <div id="Prs">
-        <span>Prós</span>
-      </div>
-      <div id="Gameplay_expansivo_e_desafiado">
-        <span
-          >Gameplay expansivo e desafiador<br />Variedade de armas<br />Atividades
-          extras<br />Cenários bem construídos<br />Trilha sonora imersiva<br />Tempo
-          de loading surreal<br /></span
-        ><br />
-      </div>
-      <div id="Contras">
-        <span>Contras</span>
-      </div>
-      <div id="Repetio_de_misses_Grficos_de_p">
-        <span
-          >Repetição de missões<br />Gráficos de personagens<br />Narrativa
-          esquecível<br />Problemas com câmera e parkour</span
-        ><br />
-      </div>
-      <svg class="Retngulo_35">
-        <rect
-          id="Retngulo_35"
-          rx="0"
-          ry="0"
-          x="0"
-          y="0"
-          width="153"
-          height="92"
-        ></rect>
-      </svg>
-      <div id="logo">
-        <span>logo</span>
-      </div>
-      <svg class="Retngulo_36">
-        <rect
-          id="Retngulo_36"
-          rx="0"
-          ry="0"
-          x="0"
-          y="0"
-          width="522"
-          height="269"
-        ></rect>
-      </svg>
-      <div id="Review_______">
-        <span>Review </span>
-      </div>
-      <svg class="Retngulo_37">
-        <rect
-          id="Retngulo_37"
-          rx="0"
-          ry="0"
-          x="0"
-          y="0"
-          width="1920"
-          height="255"
-        ></rect>
-      </svg>
-      <div id="Grupo_35">
-        <div id="Grupo_33">
-          <svg class="Retngulo_33">
-            <rect
-              id="Retngulo_33"
-              rx="20"
-              ry="20"
-              x="0"
-              y="0"
-              width="1920"
-              height="101"
-            ></rect>
-          </svg>
-          </div>
-          <div id="copyright">
-            <i class="fa fa-copyright"></i>
-          </div>
-        </div>
-      </div>
-      <img
-        id="ign_review"
-        src="imagens/ign_review.png"
-        srcset="imagens/ign_review.png 1x, ign_review@2x.png 2x"
-      />
-      <img id="tt" src="imagens/tt.png" srcset="imagens/tt.png 1x, tt@2x.png 2x" />
-      <img id="meta" src="imagens/meta.png" srcset="imagens/meta.png 1x, meta@2x.png 2x" />
-      <img
-        id="tecnlo"
-        src="imagens/tecnlo.png"
-        srcset="imagens/tecnlo.png 1x, tecnlo@2x.png 2x"
-      />
-      <svg class="Polgono_1" viewBox="0 0 73 78">
-        <path
-          id="Polgono_1"
-          d="M 51.61879348754883 7.548324902018066e-06 L 73 22.84567451477051 L 73 55.15433120727539 L 51.61879348754883 78 L 21.38120460510254 78 L 0 55.15431976318359 L 7.064458259264939e-06 22.84566307067871 L 21.38121795654297 0 Z"
-        ></path>
-      </svg>
-      <div id="ID8">
-        <span>8</span>
-      </div>
-      <div id="Grupo_57">
-        <svg class="Polgono_2" viewBox="0 0 73 78">
-          <path
-            id="Polgono_2"
-            d="M 51.61879348754883 7.548324902018066e-06 L 73 22.84567451477051 L 73 55.15433120727539 L 51.61879348754883 78 L 21.38120460510254 78 L 0 55.15431976318359 L 7.064458259264939e-06 22.84566307067871 L 21.38121795654297 0 Z"
-          ></path>
-        </svg>
-        <div id="ID95">
-          <span>9,5</span>
-        </div>
-      </div>
-      <svg class="Polgono_3" viewBox="0 0 73 78">
-        <path
-          id="Polgono_3"
-          d="M 51.61879348754883 7.548324902018066e-06 L 73 22.84567451477051 L 73 55.15433120727539 L 51.61879348754883 78 L 21.38120460510254 78 L 0 55.15431976318359 L 7.064458259264939e-06 22.84566307067871 L 21.38121795654297 0 Z"
-        ></path>
-      </svg>
-      <div id="ID95_bw">
-        <span>95</span>
-      </div>
-      <svg class="Polgono_4" viewBox="0 0 73 78">
-        <path
-          id="Polgono_4"
-          d="M 51.61879348754883 7.548324902018066e-06 L 73 22.84567451477051 L 73 55.15433120727539 L 51.61879348754883 78 L 21.38120460510254 78 L 0 55.15431976318359 L 7.064458259264939e-06 22.84566307067871 L 21.38121795654297 0 Z"
-        ></path>
-      </svg>
-      <div id="ID9">
-        <span>9</span>
-      </div>
-      <div id="comment-alt">
-        <i class="fa fa-comment-alt"></i>  
-       </div>
-      <div id="Grupo_64">
-        <div id="facebook">
-          <i class="fa fa-facebook"></i>        
-        </div>
-        <div id="instagram">
-          <i class="fa fa-instagram"></i>       
-         </div>
-        <div id="twitter-square">
-          <i class="fa fa-twitter-square"></i>     
-        </div>
-      </div>
-      <div id="Grupo_63">
-        <svg class="Retngulo_43">
-          <rect
-            id="Retngulo_43"
-            rx="0"
-            ry="0"
-            x="0"
-            y="0"
-            width="158"
-            height="177"
-          ></rect>
-        </svg>
-        <div id="user">
-          <i class="fa fa-user"></i>
-        </div>
-      </div>
-      <div id="thumbs-up">
-        <i class="fa fa-thumbs-up"></i>
-      </div>
-      <div id="thumbs-down">
-        <i class="fa fa-thumbs-down"></i>
-       </div>
-      <svg class="Linha_4" viewBox="0 0 758 1">
-        <path id="Linha_4" d="M 0 0 L 758 0"></path>
-      </svg>
-      <svg class="Linha_5" viewBox="0 0 758 1">
-        <path id="Linha_5" d="M 0 0 L 758 0"></path>
-      </svg>
-      <svg class="Linha_6" viewBox="0 0 758 1">
-        <path id="Linha_6" d="M 0 0 L 758 0"></path>
-      </svg>
-      <svg class="Retngulo_45">
-        <rect
-          id="Retngulo_45"
-          rx="22"
-          ry="22"
-          x="0"
-          y="0"
-          width="266"
-          height="57"
-        ></rect>
-      </svg>
-      <div id="Comentrios">
-        <span>Comentários</span>
-      </div>
-      <div id="comments">
-        <i class="fa fa-comments"></i>
-      </div>
-      <div id="Grupo_78">
-        <svg class="Retngulo_1">
-          <rect
-            id="Retngulo_1"
-            rx="0"
-            ry="0"
-            x="0"
-            y="0"
-            width="1925"
-            height="126"
-          ></rect>
-        </svg>
-        <div id="Sobre_Ns__">
-          <span>Sobre Nós </span>
-        </div>
-        <div id="LogoTipo_ci">
-          <span>LogoTipo</span>
-        </div>
-        <div id="Cadastre_-_se">
-          <span>Cadastre - se</span>
-        </div>
-        <div id="Reviwes">
-          <span>Reviwes</span>
-        </div>
-        <div id="Login_cl">
-          <span>Login</span>
-        </div>
-      </div>
+      </nav>
     </div>
-    <div class="container">
+    <div>
       <div class="embed-responsive embed-responsive-16by9" id="player">
-        <iframe
-          width="400"
-          height="315"
-          src="https://www.youtube.com/embed/Zbq7BnsQhrw"
-          frameborder="0"
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/iqysmS4lxwQ" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        >
-        </iframe>
+          allowfullscreen></iframe>
       </div>
     </div>
-  </body>
+  </header>
+  <main>
+    <div id="descrição">
+      <div class="container" id="paragrafo1">
+        <div class="row">
+          <div class="col-sm-12 col-lg-6 ">
+            <img src="imagens/ghostcapa.png" class="img-responsive" alt="Imagem Responsiva" id="img1">
+          </div>
+          <div class="col-sm-12  col-lg-6 text-wrap" id="texto1">
+            <h2>JIN DEVE ABANDONAR AS TRADIÇÕES
+              E SE TORNAR O FANTASMA DE TSUSHIMA</h2>
+            <span> Aventure-se além dos campos de batalha e
+              vivencie o Japão feudal de uma forma nunca antes vista.
+              Neste jogo de ação e aventura em mundo aberto,
+              trilhe por paisagens vastas e terrenos amplos,
+              encontrando personagens riquíssimos, descobrindo
+              monumentos antigos e revelando toda a beleza oculta de
+              Tsushima. Explore regiões meticulosamente criadas
+              que mostram toda a diversidade dessa enorme ilha.
+              De campos ondulantes e santuários tranquilos
+              a florestas ancestrais, vilas e montanhas com paisagens
+              de brilhar os olhos. Encontre paz na quietude
+              serena da natureza e alívio nos momentos partilhados
+              com as pessoas que ajuda ao longo de sua jornada.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="paragrafo2">
+      <div class="row">
+        <div class="col-sm-12 col-lg-6   text-wrap" id="texto2">
+          <h2> A ASCENSÃO DO FANTASMA</h2>
+          <span> Jin foi criado e treinado segundo os caminhos dos samurais.
+            Quando os mongóis aniquilam os exércitos desses guerreiros,
+            seu mundo entra em colapso. Ele se depara com a decisão
+            mais difícil de sua vida: honrar as tradições e os costumes de sua criação
+            como samurai, travando uma luta que não pode vencer,
+            ou desviar desse caminho para proteger a ilha e seu povo a qualquer custo.
+            Em sua jornada para recuperar Tsushima, Jin deve buscar os conselhos
+            e o apoio de velhos amigos, além de novos e improváveis aliados.
+            Ele precisa se desapegar das tradições para se tornar
+            um novo tipo de guerreiro e proteger o que restou de seu lar,
+            custe o que custar.</span>
+        </div>
+        <div class="col-sm-12 col-lg-6 ">
+          <img src="imagens/ghost22.png" class="img-responsive" alt="Imagem Responsiva" id="img2">
+        </div>
+      </div>
+    </div>
+    <div id="paragrafo3">
+      <div class="row m-auto">
+        <div class="col-sm-12 col-lg-4  text-wrap" id="pontos">
+          <div id="pros">
+            <h3>Prós</h3>
+            <span>expansivo e desafiador </span>
+            <span>Variedade de armas</span>
+            <span>Atividades extras</span>
+            <span>Cenários bem construídos</span>
+            <span>Trilha sonora imersiva</span>
+            <span>Tempo de loading surreal</span>
+
+          </div>
+          <div id="contras">
+            <h3 id="tituloContras">Contras</h3>
+            <span>ação de missões</span>
+            <span>Gráficos de personagens</span>
+            <span>Narrativa esquecível</span>
+            <span>Problemas com câmera e parkour</span>
+
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4 ">
+          <img src="imagens/ghost3.png" class="img-responsive" alt="Imagem Responsiva" id="img3">
+        </div>
+      </div>
+    </div>
+    <div class="col-11 text-center">
+      <form id="form-comentario" action="comentario.php" method="POST">
+        <h3>Comentario</h3>
+        <textarea name="comentario" id="comentario" placeholder="O que achei..." ></textarea>
+        <input id="enviar" type="button" value="Publicar">
+      </form>
+    </div>
+  </main>
+
+
+</body>
+
 </html>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-include("conexao.php");
+include("conexao2.php");
 ?>
 <html lang="pt-br">
 
@@ -31,6 +31,7 @@ include("conexao.php");
   </header>
   <main>
     <form action="cadastro.php" method="POST">
+    <h2>Cadastre-se <img src="imagens/logo.png"  class="imagem" alt="Logo da Eagle Games"/></h2>
       <fieldset>
         <div class="formulario">
           <img src=imagens/profile_user_icon.png class="icon">
@@ -46,7 +47,7 @@ include("conexao.php");
         </div>
         <div class="formulario">
           <img src=imagens/icon2.png class="icon">
-          <input type="password" name="senha" id="senha" required placeholder="Confirme sua senha">
+          <input type="password" name="senha2" id="senha" required placeholder="Confirme sua senha">
         </div>
         <div class="formulario">
           <img src=imagens/icon4.png class="icon">
@@ -64,16 +65,25 @@ include("conexao.php");
     </form>
     <?php
     if (isset($_POST['Criar'])) {
-      $usuario = $_POST['nome'];
-      $email = $_POST['email'];
-      $senha = $_POST['senha'];
+      $usuario = addslashes($_POST['nome']);
+      $email = addslashes($_POST['email']);
+      $senha = addslashes($_POST['senha']);
+      $senha2 = addslashes($_POST['senha2']);
 
+      if($senha === $senha2){
       $inserir = "INSERT INTO CADASTRO(NOME, EMAIL, SENHA) VALUES('$usuario', '$email', '$senha')";
-
+       
       $executar = sqlsrv_query($conn, $inserir);
-
+      }
+      
       if ($executar) {
-        echo "<h3>Usuário criado</h3>";
+        echo "<script>alert('Usuario criado!')</script>";
+
+
+        header("refresh:0;url=http://localhost/PI_2/index.html");
+      }else{
+        echo "<script>alert('Erro ao criar! Verificar dados!')</script>";
+
       }
     }
 
