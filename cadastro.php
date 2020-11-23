@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<?php
-include("conexao2.php");
-?>
 <html lang="pt-br">
 
 <head>
@@ -23,15 +20,15 @@ include("conexao2.php");
           <li><a href="index.html">Home</a></li>
           <li><a href="review.html">Review</a></li>
           <li><a href="sobre.html">Sobre nós</a></li>
-          <li><a href="login.html">Login</a></li>
+          <li><a href="login.php">Login</a></li>
           <li><a href="cadastro.php">Cadastre-se</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main>
-    <form action="cadastro.php" method="POST">
-    <h2>Cadastre-se <img src="imagens/logo.png"  class="imagem" alt="Logo da Eagle Games"/></h2>
+    <form method="POST">
+      <h2>Cadastre-se <img src="imagens/logo.png" class="imagem" alt="Logo da Eagle Games" /></h2>
       <fieldset>
         <div class="formulario">
           <img src=imagens/profile_user_icon.png class="icon">
@@ -47,7 +44,7 @@ include("conexao2.php");
         </div>
         <div class="formulario">
           <img src=imagens/icon2.png class="icon">
-          <input type="password" name="senha2" id="senha" required placeholder="Confirme sua senha">
+          <input type="password" name="confSenha" id="senha" required placeholder="Confirme sua senha">
         </div>
         <div class="formulario">
           <img src=imagens/icon4.png class="icon">
@@ -63,36 +60,8 @@ include("conexao2.php");
       </fieldset>
 
     </form>
-    <?php
-    if (isset($_POST['Criar'])) {
-      $usuario = addslashes($_POST['nome']);
-      $email = addslashes($_POST['email']);
-      $senha = addslashes($_POST['senha']);
-      $senha2 = addslashes($_POST['senha2']);
-
-      if($senha === $senha2){
-      $inserir = "INSERT INTO CADASTRO(NOME, EMAIL, SENHA) VALUES('$usuario', '$email', '$senha')";
-       
-      $executar = sqlsrv_query($conn, $inserir);
-      }
-      
-      if ($executar) {
-        echo "<script>alert('Usuario criado!')</script>";
-
-
-        header("refresh:0;url=http://localhost/PI_2/index.html");
-      }else{
-        echo "<script>alert('Erro ao criar! Verificar dados!')</script>";
-
-      }
-    }
-
-
-
-    ?>
-
-
   </main>
+  
   <footer>
 
   </footer>
@@ -100,3 +69,28 @@ include("conexao2.php");
 </body>
 
 </html>
+
+<?php
+if (isset($_POST['nome'])) {
+  $nome = htmlentities(addslashes($_POST['nome']));
+  $email = htmlentities(addslashes($_POST['email']));
+  $senha = htmlentities(addslashes($_POST['senha']));
+  $confSenha = htmlentities(addslashes($_POST['confSenha']));
+
+  if (!empty($nome) && !empty($email) && !empty($senha) && !empty($confSenha)) {
+    if ($senha === $confSenha) {
+      require_once 'Classes/usuarios.php';
+      $us = new Usuario("sqlsrv:Server=DESKTOP-LJC50H1\SQLEXPRESS;Database=PI_EAGLE", "sa", "123");
+      if ($us->cadastrar($nome, $email, $senha)) {
+        echo "<script>alert('Usuário cadastrado!')</script>";
+        header("location:index.html");
+      } else {
+        echo "<script>alert('Email já cadastrado!')</script>";
+      }
+    } else {
+      echo "<script>alert('Senhas não são iguais!')</script>";
+    }
+    }
+    
+}
+?>

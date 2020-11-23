@@ -1,0 +1,54 @@
+textarea {
+    height: 100px;
+    width: 85%;
+    border: none;
+    padding: 8px;
+    font-size: 14pt;
+    margin: 9px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* display: none; */
+    /* outline: none; */
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 80px;
+    margin-bottom: 10px;
+    margin-left:10px;
+}
+
+input[type=submit] {
+    font-family: 'Arial Black';
+    width: 100px;
+    height: 52px;
+    display: block;
+    margin-left:10px;
+}
+
+
+input[type=submit]:hover {
+    background-color: gray;
+}
+
+.area-comentario {
+    box-sizing: border-box;
+    border-bottom: 1px solid gray;
+    clear: both;
+    padding: 10px;
+}
+
+.area-comentario h3 {
+    float: left;
+    font-size: 12px;
+    padding: 5px 10px 5px 0px;
+}
+
+.area-comentario h4 {
+    font-size: 10pt;
+    line-height: 3;
+}
+
+.area-comentario p {
+    line-height: 25px;
+    color: black;
+}
