@@ -30,33 +30,19 @@
 
 </head>
 
-<body>
-  <header class="container-fluid">
-    <title>Pagina inicial</title>
-    <div>
-      <nav class=" navbar navbar-expand-lg navbar-light bg-dark">
-        <img src="imagens/logo.png" class="navbar-brand" id="logo">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav" id="menu">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="sobre.html">Sobre nós <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="review.php">review</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="cadastro.php">cadastre-se</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">login</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<body class="corpo">
+  <header>
+			<div class="caixa">     
+				<nav>
+					<ul>
+            <li><a href="index.html"><img src="imagens/logo.png" alt="Logo da Eagle Games" ></a></li>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="review.php">Review</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="cadastro.php">Cadastre-se</a></li>
+					</ul>
+				</nav>
     </div>
     <div>
       <div class="embed-responsive embed-responsive-16by9" id="player">
@@ -187,8 +173,9 @@
     
 
   </main>
-
-
+  <footer>
+    <p class="footer"> © 2020 Eagle Games Corporation <img class="icon2" src="imagens/logo.png" alt="Logo da Eagle Games" ></p>
+  </footer>
 </body>
 
 </html>
