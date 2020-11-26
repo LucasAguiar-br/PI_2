@@ -16,6 +16,7 @@
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="review.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="comentario.css">
   <!-- JS-->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -173,8 +174,8 @@
     
 
   </main>
-  <footer>
-    <p class="footer"> © 2020 Eagle Games Corporation <img class="icon2" src="imagens/logo.png" alt="Logo da Eagle Games" ></p>
+  <footer id="footerR">
+    <p> © 2020 Eagle Games Corporation <img class="icon2" src="imagens/logo.png" alt="Logo da Eagle Games" ></p>
   </footer>
 </body>
 
