@@ -10,6 +10,8 @@
 
 
     if($filaControler>0){
+        session_start();
+        $_SESSION["ID"] = $filaControler["ID"];
         echo "<script>alert('Bem vindo!')</script>";
 
         header("refresh:0;url=http://localhost/PI_2/index.html");

@@ -3,6 +3,9 @@
   require_once 'Classes/comentarios.php';
   $c = new Comentario("sqlsrv:Server=DESKTOP-LJC50H1\SQLEXPRESS;Database=PI_EAGLE", "sa", "123");
   $comments = $c->buscarComentario();
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -58,7 +61,7 @@
       <div class="container" id="paragrafo1">
         <div class="row">
           <div class="col-sm-12 col-lg-6 ">
-            <img src="imagens/ghostcapa.png" class="img-responsive" alt="Imagem Responsiva" id="img1">
+            <img src="imagens/ghost1.png" class="img-responsive" alt="Imagem Responsiva" id="img1">
           </div>
           <div class="col-sm-12  col-lg-6 text-wrap" id="texto1">
             <h2>JIN DEVE ABANDONAR AS TRADIÇÕES
@@ -141,18 +144,18 @@
       if(count($comments) >0){
         foreach ($comments as $v){
       ?>  <div class="area-comentario">
-          <h3><?php echo $v['NOME_PESSOA'] ?></h3>
+          <h3><?php echo $v["NOME_PESSOA"] ?></h3>
           <h4>
             <?php
-                $data = new dateTime($v['DIA']);
+                $data = new dateTime($v["dia"]);
                 echo $data->format('d/m/Y');
                 echo " - ";
-                echo $v['HORARIO'];
+                echo $v['horario'];
             ?>
           </h4>
           <p>
             <?php
-              echo $v['COMENTARIO'];
+              echo $v['comentario'];
             ?>
           </p>
           </div>
@@ -166,7 +169,7 @@
       <?php
         if(isset($_POST['texto'])){
           $texto = addslashes($_POST['texto']);
-          $c->inserirComentario($_SESSION['id'], $texto);
+          $c->inserirComentario($_SESSION["ID"], $texto);
 
           // header("location: review.php");
         }

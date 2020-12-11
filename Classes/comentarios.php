@@ -27,7 +27,7 @@ date_default_timezone_set('America/Sao_Paulo');
             $consul = $cmd->prepare("SELECT *, (SELECT NOME 
                                         FROM CADASTRO
                                         WHERE ID = ID_USUARIO) AS NOME_PESSOA 
-                                        FROM COMENTARIO ORDER BY DIA DESC");
+                                        FROM comentario ORDER BY DIA DESC");
             $consul->execute();
             $dados = $consul->fetchAll(PDO::FETCH_ASSOC);
             return $dados;
@@ -39,7 +39,7 @@ date_default_timezone_set('America/Sao_Paulo');
             $pass="123";
             $cmd = new PDO($connect, $user, $pass);
 
-            $consul = $cmd->prepare("INSERT INTO COMENTARIO (COMENTARIO, DIA, HORARIO, ID_USUARIO) VALUES (:c, :d, :h, :pk)");
+            $consul = $cmd->prepare("INSERT INTO comentario (COMENTARIO, DIA, HORARIO, ID_USUARIO) VALUES (:c, :d, :h, :pk)");
             $consul->bindValue(":c",$comentario);
             $consul->bindValue(":d",date('Y-m-d'));
             $consul->bindValue(":h",date('H:i'));
