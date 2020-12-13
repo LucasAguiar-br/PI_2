@@ -1,0 +1,141 @@
+@media screen and (min-width: 601px) {
+  div.example {
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+}
+#menu .navbar-brand{
+   color: white;
+   
+}
+
+#menu{
+  text-align: right;
+}
+#navbarNav .nav-link{
+  color: white;
+}
+
+#navbarNav  .navbar-toggler{
+  color: white;
+}
+#player{
+  justify-content: center;
+  margin-top: 2%;
+  margin-left: 10%;
+  max-width: 80% !important;
+  max-height: 50% !important;
+  }
+#ac{
+  justify-content: center;
+  text-align: center;
+}
+#img1{
+  
+  justify-content: center;
+}
+#texto1{
+  text-align: center;
+  margin-top: 20px;
+}
+#paragrafo1{
+  margin-top: 30px;
+}
+#img2{
+  
+  justify-content: center;
+  margin-top: 2%;
+      max-width: 100% !important;
+  max-height: 100% !important;
+}
+#texto2{
+  text-align: center;
+  margin-top: 20px;
+}
+#paragrafo2{
+  margin-top: 30px;
+}
+#img3{
+  justify-content: center;
+  margin-top: 2%;
+      max-width: 100% !important;
+  max-height: 100% !important;
+}
+#texto3{
+  text-align: center;
+}
+#paragrafo3{
+  margin-top: 30px;
+  
+  
+}
+#pros{
+  text-align: right;
+  white-space: pre;
+  
+}
+#contras{
+  text-align: right;
+  white-space: pre;   
+}
+
+#img3{
+  justify-content: center;
+  margin-top: 20%;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  
+}
+#img1{
+  justify-content: center;
+  margin-top: 2%;
+      max-width: 100% !important;
+  max-height: 100% !important;
+  
+}
+#img2{
+  justify-content: center;
+  margin-top: 2%;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  
+}
+#logo{
+  max-width: 50px;
+  max-height: 50px;
+}
+#texto1{
+  
+  text-align: center;
+  
+}
+#texto2{
+  
+  text-align: center;
+  
+  
+}
+h3{
+  color: red;
+  text-align: center;
+  margin-left:20%;
+}
+
+#text-wrap{
+  margin-top: 10px;
+}
+#nota1{
+  text-align: right;
+  
+}
+#pros{
+  text-align: center;
+
+}
+#contras{
+  text-align: center;
+}

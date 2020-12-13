@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>Eagle Games</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style_form.css">
+        <link rel="shortcut icon" href="imagens/logo.png" />
+    </head>
+    <body class="corpo">
+        <header>
+			<div class="caixa">     
+				<nav>
+					<ul>
+                        <li><a href="index.html"><img src="imagens/logo.png" alt="Logo da Eagle Games" ></a></li>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="review.php">Review</a></li>
+                        <li><a href="sobre.html">Sobre nós</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="cadastro.php">Cadastre-se</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+        <main>
+           
+            <form enctype="multipart/form-data" action="validacao_login.php" method="POST"> 
+                <h2>Faça seu Login <img src="imagens/logo.png"  class="imagem" alt="Logo da Eagle Games"/> </h2>
+               
+                <fieldset> 
+                    
+                    <div class="formulario">
+                        <img src=imagens/icon3.png class="icon">
+                        <input type="email" name="email" id="email" required placeholder="seuemail@dominio.com">
+                    </div>
+                    <div class="formulario">
+                        <img src=imagens/icon2.png class="icon">
+                        <input type="password" name="senha" id="senha" required placeholder="digite sua senha">
+                    </div>
+                    <div class="formulario">
+                        <input type="submit" value="Entrar" class="enviar">
+                    </div>
+                    <div class="link">
+                        <p>Não tem uma conta?<a class="redefinir" href="cadastro.html"> Cadastre-se </a></p>
+                    </div>
+                    
+                </fieldset>
+                
+            </form>
+            
+        </main>
+        <footer>
+            <p class="footer"> © 2020 Eagle Games Corporation <img class="icon2" src="imagens/logo.png" alt="Logo da Eagle Games" ></p>
+              
+        </footer>
+    </body>
+</html>

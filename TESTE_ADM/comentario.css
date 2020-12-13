@@ -1,0 +1,142 @@
+textarea {
+    height: 100px;
+    width: 85%;
+    border: none;
+    padding: 8px;
+    font-size: 14pt;
+    margin: 9px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* display: none; */
+    /* outline: none; */
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 80px;
+    margin-bottom: 10px;
+    margin-left:10px;
+}
+
+input[type=submit] {
+    font-family: 'Arial Black';
+    width: 100px;
+    height: 52px;
+    display: block;
+    margin-left:10px;
+}
+
+
+input[type=submit]:hover {
+    background-color: gray;
+}
+
+.area-comentario {
+    box-sizing: border-box;
+    border-bottom: 1px solid gray;
+    clear: both;
+    padding: 10px;
+}
+
+.area-comentario h3 {
+    float: left;
+    font-size: 12px;
+    padding: 5px 10px 5px 0px;
+}
+
+.area-comentario h4 {
+    font-size: 10pt;
+    line-height: 3;
+}
+
+.area-comentario p {
+    line-height: 25px;
+    color: black;
+}
+
+/* parte dos comentarios php*/
+
+#topo3{
+    margin-left: 25%;
+    margin-right: 25%;
+    border-bottom-width:0.1em;
+    border-bottom-style:solid;
+    border-bottom-color:rgb(70, 69, 69);
+}
+
+#topo2{
+    display: flex;
+    flex-direction: row;
+}
+#topo2 #p1{
+    font-weight: bold;
+}
+#topo2 #p2{
+    font-size: 0.9em;
+    margin-left: 1em;
+}
+#topo1{
+    padding: 0.5em;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+#campocomentario{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 1em;
+}
+
+/*parta da pagina do admin*/
+#post1{
+    text-align: center;
+
+}
+#post1 #topo5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+}
+#post1 #topo6 div, #topo1{
+   background-color: white;
+}
+#post1 #topo6{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#post1 #topo6 #apagar{
+    width: 2em;
+}
+
+#post1 #p3{
+    width: 4em;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    border: 1px solid #000000;
+    padding: 1em;
+}
+#post1 #p4{
+    width: 6em;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    border: 1px solid #000000;
+    padding: 1em;
+}
+#post1 #p5{
+    width: 40em;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    border: 1px solid #000000;
+    padding: 1em;
+}
+#post1 #p6{
+    width: 20em;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    border: 1px solid #000000;
+    padding: 1em;
+}
+#post1 #p7{
+    width: 6em;
+    border: 1px solid #000000; 
+    padding: 1em;
+}
