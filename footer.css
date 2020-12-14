@@ -1,0 +1,25 @@
+#final {
+    position: absolute;
+    overflow: visible;
+    width: 1000px;
+    height: 30px;
+    left: 850px;
+    top: 3690px;
+}
+
+#footerR  {
+    position: absolute;
+    height: 30px;
+    left: 820px;
+}
+
+#footerR {
+    color: black;
+}
+
+.finalFooter {
+    position: absolute;
+    left: 820px;
+    top: 880px;
+    
+}

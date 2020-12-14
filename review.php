@@ -1,8 +1,21 @@
 <?php
   session_start();
-  require_once 'Classes/comentarios.php';
-  $c = new Comentario("sqlsrv:Server=DESKTOP-LJC50H1\SQLEXPRESS;Database=PI_EAGLE", "sa", "123");
-  $comments = $c->buscarComentario();
+
+  require_once "config.php";
+
+//Consulta para listar meus contatos
+$tabela = array();
+
+$lista_sql = 'SELECT * FROM COMENTARIO ORDER BY DATA';
+
+foreach ($objBanco->query($lista_sql) as $registro) {
+        $tabela[$registro['ID']] = [
+        'comentario' => $registro['COMENTARIO'],
+        'nome' => $registro['NOME'],
+        'data' => $registro['DATA']
+    ];
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -16,6 +29,7 @@
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="review.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="comentario.css">
   <!-- JS-->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -30,33 +44,27 @@
 
 </head>
 
-<body>
-  <header class="container-fluid">
-    <title>Pagina inicial</title>
-    <div>
-      <nav class=" navbar navbar-expand-lg navbar-light bg-dark">
-        <img src="imagens/logo.png" class="navbar-brand" id="logo">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav" id="menu">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="sobre.html">Sobre nós <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="review.php">review</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="cadastro.php">cadastre-se</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">login</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<body class="corpo">
+  <header>
+			<div class="caixa">     
+				<nav>
+					<ul>
+            <li><a href="index.html"><img src="imagens/logo.png" alt="Logo da Eagle Games" ></a></li>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="review.php">Review</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
+            <?php
+ if (isset($_SESSION['email'])) {
+    echo"<li><a href='sair.php'>Sair</a></li>";
+	
+}
+else{
+    echo"<li><a href='login.html'>Login</a></li>";
+    echo"<li><a href='cadastro.php'>Cadastre-se</a></li>";
+  }
+?>
+					</ul>
+				</nav>
     </div>
     <div>
       <div class="embed-responsive embed-responsive-16by9" id="player">
@@ -142,53 +150,52 @@
       </div>
 
     </div>
-
-    <h2>Deixa seu comentario</h2>
-    <form method="POST">
-      <textarea name="texto" placeholder="Deixa aqui seu comentário"></textarea>
-      <input type="submit" value="Publicar">
-    </form>
-
-        
     <?php
-      if(count($comments) >0){
-        foreach ($comments as $v){
-      ?>  <div class="area-comentario">
-          <h3><?php echo $v['NOME_PESSOA'] ?></h3>
-          <h4>
-            <?php
-                $data = new dateTime($v['DIA']);
-                echo $data->format('d/m/Y');
-                echo " - ";
-                echo $v['HORARIO'];
-            ?>
-          </h4>
-          <p>
-            <?php
-              echo $v['COMENTARIO'];
-            ?>
-          </p>
-          </div>
-          
-       <?php }
-      }else{
-        echo "Sem comentarios";
-      }
-      ?>
+ if (isset($_SESSION['email'])) {
+    echo"
+    <div id= 'campocomentario'>
+    <h2>Deixa seu comentario</h2>
+    <form enctype='multipart/form-data' action='inserircomentario.php' method='POST'>
+      <textarea name='comentario' placeholder='Deixa aqui seu comentário'></textarea>
+      <input type='submit' value='Publicar'>
+    </form>
+    </div> " ;
+	
+}
+else{
+    echo"<div id= 'campocomentario'>
+    <h4>Acesse sua Conta e participe da conversa</h4>
+    </div>";
+    
+  }
+?>
+    
+    <?php
+            if (count($tabela) > 0) { // Se tiver dado na tabela
 
-      <?php
-        if(isset($_POST['texto'])){
-          $texto = addslashes($_POST['texto']);
-          $c->inserirComentario($_SESSION['id'], $texto);
+                foreach ($tabela as $id => $reg) {
 
-          // header("location: review.php");
-        }
-      ?>
+                    echo "	
+                         <div id='topo3'>
+                            <div id='topo2'>	
+                                    <div id='p1'>{$reg['nome']}</div>
+                                    <div id='p2'>{$reg['data']}</div>
+                            </div>
+                            <div id='topo1'>
+                                    <div id='p3'>{$reg['comentario']}</div>
+                            </div>
+                          </div>    
+										
+									";
+                }
+            } 
+            ?>
     
 
   </main>
-
-
+  <footer id="footerR">
+    <p> © 2020 Eagle Games Corporation <img class="icon2" src="imagens/logo.png" alt="Logo da Eagle Games" ></p>
+  </footer>
 </body>
 
 </html>

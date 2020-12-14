@@ -52,3 +52,12 @@ nav a:hover {
 p {
   color: white;
 }
+.footer {
+  text-align: center;
+}
+.icon2{
+  width: 1.5rem;
+  margin-left: 0.7rem;
+  margin-top: 0.5rem;
+  margin: auto;
+}

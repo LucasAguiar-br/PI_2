@@ -18,16 +18,16 @@
         <ul>
           <li><a href="index.html"><img src="imagens/logo.png" alt="Logo da Eagle Games"></a></li>
           <li><a href="index.html">Home</a></li>
-          <li><a href="review.html">Review</a></li>
+          <li><a href="review.php">Review</a></li>
           <li><a href="sobre.html">Sobre nós</a></li>
-          <li><a href="login.php">Login</a></li>
+          <li><a href="login.html">Login</a></li>
           <li><a href="cadastro.php">Cadastre-se</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main>
-    <form method="POST">
+    <form enctype="multipart/form-data" action="inserir.php" method="POST">
       <h2>Cadastre-se <img src="imagens/logo.png" class="imagem" alt="Logo da Eagle Games" /></h2>
       <fieldset>
         <div class="formulario">
@@ -45,14 +45,7 @@
         <div class="formulario">
           <img src=imagens/icon2.png class="icon">
           <input type="password" name="confSenha" id="senha" required placeholder="Confirme sua senha">
-        </div>
-        <div class="formulario">
-          <img src=imagens/icon4.png class="icon">
-          <input name="avatar" id="avatar" type="url" placeholder="Link da sua foto">
-        </div>
-        <div class="checkbox">
-          <label><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
-        </div>
+        </div>>
         <div class="formulario">
           <input type="submit" name="Criar" value="Criar" class="enviar">
         </div>
@@ -63,7 +56,7 @@
   </main>
   
   <footer>
-
+    <p class="footer"> © 2020 Eagle Games Corporation <img class="icon2" src="imagens/logo.png" alt="Logo da Eagle Games" ></p>
   </footer>
 
 </body>

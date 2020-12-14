@@ -9,7 +9,7 @@ date_default_timezone_set('America/Sao_Paulo');
 
         public function __construct($connect, $user, $pass)
         {
-            $connect="sqlsrv:Server=DESKTOP-LJC50H1\SQLEXPRESS;Database=PI_EAGLE";
+            $connect="sqlsrv:Server=localhost;Database=PI_EAGLE";
             $user="sa";
             $pass="123";
 
@@ -19,10 +19,10 @@ date_default_timezone_set('America/Sao_Paulo');
 
         public function buscarComentario(){
 
-        $connect="sqlsrv:Server=DESKTOP-LJC50H1\SQLEXPRESS;Database=PI_EAGLE";
-        $user="sa";
-        $pass="123";
-        $cmd = new PDO($connect, $user, $pass);
+            $connect="sqlsrv:Server=localhost;Database=PI_EAGLE";
+            $user="sa";
+            $pass="123";
+            $cmd = new PDO($connect, $user, $pass);
         
             $consul = $cmd->prepare("SELECT *, (SELECT NOME 
                                         FROM CADASTRO
